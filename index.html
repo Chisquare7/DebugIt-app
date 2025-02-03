@@ -21,10 +21,10 @@
           </div>
           <div class="topControls">
             <div class="soundToggle">&#128266;</div>
-            <button class="themeToggle">&#127763;</button>
+            <button class="theme" id="themeToggle">&#127763;</button>
           </div>
         </section>
-        <section class="instructionsContainer">
+        <section class="instructionsContainer" id="instructions">
           <div>
             <h2 class="appSubHead">Welcome to the DebugIt Programming Quiz!</h2>
           </div>
@@ -95,7 +95,7 @@
           </div>
           <div id="optionQuiz" class="quizOptions"></div>
           <div class="controls">
-            <button id="nextBtn">Next Question</button>
+            <button id="nextBtn" style="display: none">Next Question</button>
           </div>
         </section>
         <section id="resultQuiz" class="quizResult">
@@ -137,7 +137,7 @@
       preload="auto"
     ></audio>
 
-    <script src=""></script>
+    <script src="quizFunctionality.js"></script>
     <script src=""></script>
   </body>
 </html>
