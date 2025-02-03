@@ -227,4 +227,91 @@ const quizData = [
     options: ["int", "String", "boolean", "char"],
     correct: 1,
   },
+  {
+    question: "What is the output of typeof null in JavaScript?",
+    options: ["null", "undefined", "object", "number"],
+    correct: 2,
+  },
+  {
+    question:
+      "Which method is used to add elements to the end of an array in JavaScript?",
+    options: ["push()", "pop()", "unshift()", "shift()"],
+    correct: 0,
+  },
+  {
+    question: "What does the `super` keyword do in Java?",
+    options: [
+      "Refers to the parent class",
+      "Creates a new instance",
+      "Declares a constant",
+      "Ends program execution",
+    ],
+    correct: 0,
+  },
+  {
+    question:
+      "Which programming language is primarily used for machine learning?",
+    options: ["Python", "C", "JavaScript", "Swift"],
+    correct: 0,
+  },
+  {
+    question: "What is the time complexity of binary search?",
+    options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    correct: 1,
+  },
+  {
+    question: "What is a pointer in C?",
+    options: [
+      "A variable that stores memory addresses",
+      "A function that returns memory size",
+      "A special integer type",
+      "An operator",
+    ],
+    correct: 0,
+  },
+  {
+    question: "Which of the following is NOT an OOP principle?",
+    options: ["Encapsulation", "Inheritance", "Polymorphism", "Compilation"],
+    correct: 3,
+  },
+  {
+    question: "What is the correct way to declare a function in Python?",
+    options: [
+      "def myFunction():",
+      "function myFunction()",
+      "void myFunction()",
+      "fn myFunction()",
+    ],
+    correct: 0,
+  },
+  {
+    question: "What is the default value of an uninitialized variable in Java?",
+    options: ["null", "0", "undefined", "Depends on the type"],
+    correct: 3,
+  },
+  {
+    question: "Which symbol is used for single-line comments in C++?",
+    options: ["//", "/*", "#", "--"],
+    correct: 0,
+  },
+  {
+    question: "Which of the following is a dynamically typed language?",
+    options: ["Java", "C++", "Python", "Rust"],
+    correct: 2,
+  },
+  {
+    question: "How do you declare a constant in JavaScript?",
+    options: [
+      "const x = 10;",
+      "var x = 10;",
+      "let x = 10;",
+      "constant x = 10;",
+    ],
+    correct: 0,
+  },
+  {
+    question: "Which keyword is used to define a class in Python?",
+    options: ["class", "define", "struct", "object"],
+    correct: 0,
+  },
 ];
