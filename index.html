@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DebugIt Quiz App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body>
@@ -68,10 +68,12 @@
             </ul>
           </div>
           <div class="selectDifficulty">
-            <button id="startQuiz">Select Difficulty level to start</button>
+            <button id="startQuiz" disabled>
+              Select Difficulty level to start
+            </button>
           </div>
         </section>
-        <section id="quizContent">
+        <section id="quizContent" style="display: none">
           <div class="quizHeader">
             <div class="progressContainer">
               <div class="progressBar">
@@ -98,7 +100,7 @@
             <button id="nextBtn" style="display: none">Next Question</button>
           </div>
         </section>
-        <section id="resultQuiz" class="quizResult">
+        <section id="resultQuiz" class="quizResult" style="display: none">
           <div class="score" id="score"></div>
           <div class="performanceStats">
             <div>
