@@ -4,7 +4,7 @@ const themeToggle = document.getElementById("themeToggle");
 const instructions = document.getElementById("instructions");
 const quizContent = document.getElementById("quizContent");
 const questionContainer = document.getElementById("question");
-const optionsContainer = document.getElementById("optionQuiz");
+const optionsContainer = document.getElementById("options");
 const nextBtn = document.getElementById("nextBtn");
 const progressContainer = document.getElementById("progress");
 const resultContainer = document.getElementById("resultQuiz");
@@ -53,11 +53,8 @@ difficultyButtons.forEach((button) => {
 // Functionality for start Quiz Button
 
 startQuizBtn.addEventListener("click", () => {
-  console.log("Start Quiz Clicked"); // Debugging log
-  if (!instructions || !quizContent) {
-    console.error("Elements not found");
-    return;
-  }
+  if (!selectedDifficulty) return;
+
   instructions.style.display = "none";
   quizContent.style.display = "block";
   loadQuestion();

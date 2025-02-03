@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DebugIt Quiz App</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
-    /> -->
+    />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body>
@@ -92,10 +92,12 @@
             </div>
           </div>
           <div class="questionContainer">
-            <div id="question"></div>
+            <div id="question" class="question"></div>
             <div class="categoryTag"></div>
           </div>
-          <div id="optionQuiz" class="quizOptions"></div>
+
+          <div id="options" class="options"></div>
+
           <div class="controls">
             <button id="nextBtn" style="display: none">Next Question</button>
           </div>
@@ -140,6 +142,6 @@
     ></audio>
 
     <script src="quizFunctionality.js"></script>
-    <script src=""></script>
+    <script src="questions.js"></script>
   </body>
 </html>

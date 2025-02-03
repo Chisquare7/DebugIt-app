@@ -137,3 +137,121 @@ button {
 button:hover {
   background-color: var(--button-hover);
 }
+
+/* Styling of the quiz content container */
+
+.quizHeader {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.progressContainer {
+  flex-grow: 1;
+}
+
+.progressBar {
+  height: 8px;
+  background: var(--card-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--button);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.timer {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.timerFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(var(--button) 0%, transparent 0%);
+  transition: background 1s linear;
+}
+
+.hints {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.hintBtn {
+  font-size: 0.9rem;
+  padding: 0.5em 1em;
+}
+
+.question {
+  margin-bottom: 1.5em;
+}
+
+.categoryTag {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-radius: 0.93rem;
+  background: var(--button);
+  color: var(--background);
+  font-size: 0.9rem;
+  margin-bottom: 1em;
+}
+
+.options {
+  display: grid;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.option {
+  padding: 1em;
+  background-color: var(--background);
+  border: 2px solid var(--text);
+  border-radius: 0.313rem;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: var(--button);
+  color: white;
+}
+
+.option.selected {
+  background-color: var(--button);
+  color: white;
+}
+
+.option.correct {
+  background-color: var(--button);
+  color: white;
+}
+
+.option.wrong {
+  background-color: #f44336;
+  color: white;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
