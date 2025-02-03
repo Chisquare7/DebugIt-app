@@ -255,3 +255,23 @@ button:hover {
   justify-content: space-between;
   gap: 1em;
 }
+
+/* Styling of the result container */
+
+.result {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.performanceStats {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+}
