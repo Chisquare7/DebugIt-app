@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="quizContainer">
+        <section class="appHeader">
+          <div class="heading">
+            <h1 class="quizHead">DebugIt Programming Brain Buster Quiz</h1>
+          </div>
+          <div class="topControls">
+            <div class="soundToggle">&#128266;</div>
+            <button class="themeToggle">&#127763;</button>
+          </div>
+        </section>
+        <section>
+          <div>
+            <h2 class="appSubHead">Welcome to the DebugIt Programming Quiz!</h2>
+          </div>
+          <div class="difficultySelector">
+            <div class="statusHeading">
+              <h3 class="statusHead">Select Difficulty:</h3>
+            </div>
+            <div class="difficultyStatus">
+              <button class="difficultyBtn" data-difficulty="easy">
+                Easy (20 mins)
+              </button>
+              <button class="difficultyBtn" data-difficulty="medium">
+                Medium (40 mins)
+              </button>
+              <button class="difficultyBtn" data-difficulty="hard">
+                Hard (60 mins)
+              </button>
+            </div>
+          </div>
+          <div class="rulesContainer">
+            <div>
+              <h3 class="ruleHead">Rules:</h3>
+            </div>
+            <ul>
+              <li>50 JavaScript-related questions</li>
+              <li>Time limit based on difficulty</li>
+              <li>3 hints available per quiz</li>
+              <li>Bonus points for quick answers</li>
+            </ul>
+          </div>
+          <div>
+            <button id="startQuiz">Select Difficulty level to start</button>
+          </div>
+        </section>
+        <section id="quizContent">
+          <div class="quizHeader">
+            <div class="progressContainer">
+              <div class="progressBar">
+                <div class="progressFill"></div>
+              </div>
+              <div id="progress"></div>
+            </div>
+            <div class="timer">
+              <div class="timerFill"></div>
+              <span id="timeLeft"></span>
+            </div>
+            <div class="hints">
+              <p>Hints left:</p>
+              <span id="hintsLeft">3</span>
+              <button id="useHint" class="hintBtn">Use Hint</button>
+            </div>
+          </div>
+          <div class="questionContainer">
+            <div id="question"></div>
+            <div class="categoryTag"></div>
+          </div>
+          <div id="optionQuiz" class="quizOptions"></div>
+          <div class="controls">
+            <button id="nextBtn">Next Question</button>
+          </div>
+        </section>
+        <section id="resultQuiz" class="quizResult">
+          <div class="score" id="score"></div>
+          <div class="performanceStats">
+            <div>
+              <h3>Quiz performance Statistics</h3>
+            </div>
+            <div id="statsContainer"></div>
+          </div>
+          <div class="statsButtons">
+            <button id="viewHistory">View History</button>
+            <button id="restartButton">Try Again</button>
+            <button id="shareScore">Share Score</button>
+          </div>
+        </section>
+        <section id="historyModal" class="modalHistory">
+          <div class="modalContent">
+            <div class="modalHeading">
+              <h2>Quiz History</h2>
+            </div>
+            <div id="historyContent"></div>
+            <div>
+              <button class="closeModal">Close</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <audio
+      id="correctSound"
+      src="data:audio/mp3; base64,..."
+      preload="auto"
+    ></audio>
+    <audio
+      id="wrongSound"
+      src="data:audio/mp3; base64,..."
+      preload="auto"
+    ></audio>
+
+    <script src=""></script>
+    <script src=""></script>
+  </body>
+</html>
