@@ -1,0 +1,72 @@
+:root {
+  font-size: 1rem;
+  --background: #ffffff;
+  --text: #333333;
+  --quiz-card: #f5f5f5;
+  --button: #4caf50;
+  --button-hover: #45a049;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.container {
+  /* width: 90%; */
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.quizContainer {
+  background-color: var(--quiz-card);
+  border-radius: 0.625rem;
+  padding: 2em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling of the Header section */
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.topControls {
+  display: flex;
+  align-items: center;
+}
+
+.soundToggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 1em;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.quizHead {
+  font-size: 1.8rem;
+}
