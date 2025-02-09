@@ -292,13 +292,13 @@ function showResult() {
   quizContent.style.display = "none";
   resultContainer.style.display = "block";
 
-  const percentage =
-    (score /
-      (quizData.length * difficultySettings[selectedDifficulty].points)) *
-    100;
-  scoreContainer.textContent = `Final Score: ${score} points (${percentage.toFixed(
-    1
-  )}%)`;
+  saveQuizResult();
+
+  const correctAnswers = Math.min(quizStats.correctAnswers, quizData.length);
+  const percentage = (correctAnswers / quizData.length) * 100;
+  scoreContainer.textContent = `Final Score: ${correctAnswers}/${
+    quizData.length
+  } (${percentage.toFixed(0)}%)`;
 
   const totalTime = Math.round((new Date() - quizStats.startTime) / 1000);
   const avgTimePerQuestion = (totalTime / quizData.length).toFixed(1);
@@ -315,7 +315,7 @@ function showResult() {
             </div>
             <div class="stat-item">
                 <h4>Correct Answers</h4>
-                <p>${quizStats.correctAnswers}/${quizData.length}</p>
+                <p>${correctAnswers}/${quizData.length}</p>
             </div>
             <div class="stat-item">
                 <h4>Hints Used</h4>
@@ -328,11 +328,12 @@ function showResult() {
                   selectedDifficulty.slice(1)
                 }</p>
             </div>
+            <div class="category-performance stat-item">
+                <h4>Category Performance</h4>
+                ${generateCategoryStats()}
+            </div>
         </div>
-        <div class="category-performance">
-            <h4>Category Performance</h4>
-            ${generateCategoryStats()}
-        </div>
+        
   `;
 
   document.getElementById("statsContainer").innerHTML = statsHTML;
@@ -346,9 +347,12 @@ function showResult() {
 
 // Logic to generate category statistics
 function generateCategoryStats() {
-  return Object.entries(quizStats.categoryPerformance)
+  return Object.entries(quizStats?.categoryPerformance || {})
     .map(([category, stats]) => {
-      const percentage = ((stats.correct / stats.total) * 100).toFixed(1);
+      const percentage =
+        stats.total > 0
+          ? ((stats.correct / stats.total) * 100).toFixed(1)
+          : "0.0";
       return `
                 <div class="category-stat">
                     <span class="category-name">${category}</span>
@@ -383,15 +387,22 @@ function formatTime(seconds) {
 // Logic to save quiz result
 
 function saveQuizResult() {
+  const correctAnswers = Math.min(quizStats.correctAnswers, quizData.length);
+  const percentage = (correctAnswers / quizData.length) * 100;
+
   const result = {
     date: new Date().toISOString(),
-    score,
+    score: correctAnswers,
     difficulty: selectedDifficulty,
     stats: quizStats,
-    percentage: ((quizStats.correctAnswers / quizData.length) * 100).toFixed(1),
+    percentage: percentage.toFixed(1),
   };
 
   let history = JSON.parse(localStorage.getItem("quizHistory") || "[]");
   history.push(result);
   localStorage.setItem("quizHistory", JSON.stringify(history));
 }
+
+window.onload = function () {
+  historyModal.style.display = "none";
+};
